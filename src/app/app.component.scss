@@ -1,0 +1,99 @@
+.box {
+	height: 200px;
+	width: 200px;
+	overflow: auto;
+	background: red;
+}
+
+.products--grid {
+	display: flex;
+	flex-direction: column;
+	div {
+	  img {
+	    width: 100%;
+	    border-radius: 10px;
+	  }
+	  h2, p {
+	    margin: 0;
+	  }
+	}
+}
+
+.message-error {
+	background: red;
+	color: white;
+	opacity: 0;
+	transition: all linear .5s;
+	&.invalid {
+	  opacity: 1;
+	}
+}
+
+.line-error {
+	height: 0;
+	border-bottom: 1px solid;
+	&.invalid {
+	  border-color: red;
+	}
+	&.valid {
+	  border-color: green;
+	}
+}
+
+.styles {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+p {
+  color: red;
+  margin: 5px 0;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media screen and (min-width: 40em) {
+	.products--grid {
+	  display: grid;
+	  grid-template-columns: repeat(5, 1fr);
+	  grid-gap: 15px;
+	}
+}
